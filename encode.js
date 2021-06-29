@@ -15,10 +15,10 @@ function enCode() {
         for (j = 0; j < alphabet.length; j++) {
             
             if (lowerInput.charAt(i) == alphabet[j]) {
-                if (j > (26 - k)) {
-                    newArray.push(alphabet[(j+k-26)]);
+                if (j >= (26 - k)) {
+                    newArray.push(alphabet[(Number(j)+Number(k)-26)]);
                 } else {
-                newArray.push(alphabet[j+k]);
+                    newArray.push(alphabet[(Number(j)+Number(k))]);
                 }
             } 
         }
