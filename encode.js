@@ -1,7 +1,7 @@
 function enCode() {
 
     let userInput = document.getElementById("userInput").value;
-    let k = document.getElementById("userShift").value;
+    let k = Number(document.getElementById("userShift").value);
     const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     let lowerInput = userInput.toLowerCase();
     let newArray = [];
@@ -16,9 +16,9 @@ function enCode() {
             
             if (lowerInput.charAt(i) == alphabet[j]) {
                 if (j >= (26 - k)) {
-                    newArray.push(alphabet[(Number(j)+Number(k)-26)]);
+                    newArray.push(alphabet[(j+k-26)]);
                 } else {
-                    newArray.push(alphabet[(Number(j)+Number(k))]);
+                    newArray.push(alphabet[(j+k)]);
                 }
             } 
         }
